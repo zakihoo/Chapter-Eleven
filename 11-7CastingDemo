@@ -1,0 +1,19 @@
+public class CastingDemo {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Object object1 = new CircleFromSimoleGeometricObject(1);
+		Object object1 = new RectangleFromSimoleGeometricObject(1,1);
+		
+		displayObject(object1);
+		displayObject(object2);
+	}
+	public static void displayObject(Object object){
+		if(object instanceof CircleFromSimoleGeometricObject){
+			System.out.println("The circle area is " + ((CircleFromSimoleGeometricObject)object).getArea());
+			System.out.println("The circle diameter is " + ((CircleFromSimoleGeometricObject)object).getDiameter());
+		}
+		else if(object instanceof RectangleFromSimoleGeometricObject){
+			System.out.println("The Rectangle area is " + ((RectangleFromSimoleGeometricObject)object).getArea());
+		}
+	}
+}
